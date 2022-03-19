@@ -10,11 +10,9 @@ fn main() {
     let first_number = first.parse::<f32>().unwrap();
     let second_number = second.parse::<f32>().unwrap();
 
-    print!("{}", first_number);
-    print!("{:?}", operator);
-    print!("{}", second_number);
+    let result = operate(operator, first_number, second_number);
 
-    operate(operator, first_number, second_number);
+    println!("Result: {}", result);
 }
 
 fn operate(operator: char, first_number: f32, second_number: f32) -> f32 {
